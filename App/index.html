@@ -78,7 +78,7 @@
       </div>
       <img src="/B9A5-smart-ticketing/images/cupon-devider.png" alt="">
     <div class="ml-4 mt-20">
-      <p class="font-bold">NEW1<span class="font-extrabold text-xl">5</span></p>
+      <p id="cupon-code-15" class="font-bold">NEW1<span class="font-extrabold text-xl">5</span></p>
       <p class="text-slate-500">Coupon Code</p>
     </div>
   </div> 
@@ -90,7 +90,7 @@
     </div>
     <img src="/B9A5-smart-ticketing/images/cupon-devider.png" alt="">
   <div class="ml-4 mt-20">
-    <p class="font-bold">Couple 20</p>
+    <p id="cupon-code-20" class="font-bold">Couple 20</p>
     <p class="text-slate-500">Coupon Code</p>
   </div>
 </div> 
@@ -189,7 +189,7 @@
       </div>
         <div class="grid mr-8 grid-cols-4 gap-x-8 gap-y-8">
         <button id="sit-A1" class="bg-[#F7F8F8] w-24 text-center py-2 rounded-lg text-slate-500">A1</button>
-        <p class="bg-[#F7F8F8] w-24 text-center py-2 rounded-lg text-slate-500">A2</p>
+        <p class="bg-[#F7F8F8] sits w-24 text-center py-2 rounded-lg text-slate-500">A2</p>
         <p class="bg-[#F7F8F8] w-24 text-center py-2 rounded-lg text-slate-500 ml-4">A3</p>
         <p class="bg-[#F7F8F8] w-24 text-center py-2 rounded-lg text-slate-500 ml-4">A4</p>
         <p class="bg-[#F7F8F8] w-24 text-center py-2 rounded-lg text-slate-500">B1</p>
@@ -241,15 +241,15 @@
       <div class="mt-4">
         <div class="bg-[#F7F8F8] m-6 rounded-lg">
           <div class="flex justify-between mx-2">
-            <P class="font-semibold text-lg p-4">Seat <span id="seleted-sit" class="px-2 rounded-lg text-sm text-white bg-[#1DD100]">0</span></P>
+            <P class="font-semibold text-lg p-4">Seat <span id="selected-sit" class="px-2 rounded-lg text-sm text-white bg-[#1DD100]">0</span></P>
             <P class="font-semibold text-lg p-4">Class</P>
             <P class="font-semibold text-lg p-4">Price</P>
           </div>
           <div class="mx-4">
-            <div  class="flex hidden justify-between border-t-2 border-dashed">
-              <p class="font-semibold text-[#030712] text-opacity-60 p-2">C2</p>
+            <div id="sit-part"  class="flex hidden justify-between border-t-2 border-dashed">
+              <p id="Sit-class" class="font-semibold text-[#030712] text-opacity-60 p-2">C2</p>
               <p class="font-semibold text-[#030712] text-opacity-60 p-2">Economoy</p>
-              <p class="font-semibold text-[#030712] text-opacity-60 p-2">550</p>
+              <p id="sit-price" class="font-semibold text-[#030712] text-opacity-60 p-2">550</p>
             </div>
             <div class="flex hidden justify-between border-t-2 border-dashed">
               <p class="font-semibold text-[#030712] text-opacity-60 p-2">C2</p>
@@ -270,19 +270,19 @@
           </div>
           <div class="flex justify-between mt-4 mx-6">
                <p class="font-semibold text-lg">Total Price</p>
-               <p class="font-semibold text-lg">BDT 0</p>
+               <p class="font-semibold text-lg">BDT <span id="total-price">0</span></p>
           </div>
           <div class="flex hidden justify-between mt-4 mx-6">
             <p class="font-semibold text-xs">Discount Price</p>
             <p class="font-semibold text-xs">BDT 0</p>
           </div>
           <div class="flex justify-between bg-[#FFFFFF] mx-6 p-2 rounded-lg my-4">
-                <input class="text-[#030712] text-opacity-40" type="text" placeholder="Have any copupon?">
-                <button class="font-semibold text-white bg-[#1DD100] px-4 rounded-lg p-2">Apply</button>
+                <input id="input" class="text-[#030712] text-opacity-40" type="text" placeholder="Have any copupon?">
+                <button id="apply-discount" class="font-semibold text-white bg-[#1DD100] px-4 rounded-lg p-2">Apply</button>
           </div>
           <div class="flex justify-between my-4 mx-6">
             <p class="font-semibold text-lg">Grand Price</p>
-            <p class="font-semibold text-lg">BDT 0</p>
+            <p class="font-semibold text-lg">BDT <span id="Grand-price">0</span></p>
        </div>
         </div>
         <div class="mx-6 mb-2"> 
@@ -345,4 +345,5 @@
 <!-- end of footer -->
 </body>
 <script src="/App/app.js"></script>
+<script src="/class.js"></script>
 </html>
