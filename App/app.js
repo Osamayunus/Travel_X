@@ -65,11 +65,41 @@ grandPrice.innerText=totalPriceAdd;
    })
 
 document.getElementById('apply-discount').addEventListener('click',function(){
-const cuponCode15=document.getElementById('cupon-code-15');
-const cuponCode20=document.getElementById('cupon-code-20');
-const inputText=document.getElementById('input').value
-const cupon15InnerText=cuponCode15.innerText;
-const cupon20InnerText=cuponCode20.innerText;
- 
+       console.log('clicked');
+let cuponCode15=document.getElementById('cupon-code-15');
+let cuponCode20=document.getElementById('cupon-code-20');
+let inputText=document.getElementById('input').value
+let cupon15InnerText=cuponCode15.innerText;
+let cupon20InnerText=cuponCode20.innerText;
+console.log(cupon15InnerText,cupon20InnerText,inputText);
+ if((cupon15InnerText===inputText) || (cupon20InnerText===inputText)){
+console.log('right cupon code');
+      if(cupon15InnerText===inputText){
+const totalPriceText=document.getElementById('total-price').innerText;
+const totalPriceTextNum=parseInt(totalPriceText);
+const percent=15;
+const discountPrice=(totalPriceTextNum/100)* percent;
+const currentPriceNow=totalPriceTextNum-discountPrice;
+document.getElementById('Grand-price').innerText=currentPriceNow;
+document.getElementById('discount').classList.remove('hidden');
+document.getElementById('discount-price').innerText=discountPrice;
+document.getElementById('cupon').classList.add('hidden');
 }
-})
+    else{
+
+       const totalPriceText=document.getElementById('total-price').innerText;
+       const totalPriceTextNum=parseInt(totalPriceText);
+       const percent=20;
+       const discountPrice=(totalPriceTextNum/100)* percent;
+       const currentPriceNow=totalPriceTextNum-discountPrice;
+       document.getElementById('Grand-price').innerText=currentPriceNow;
+       document.getElementById('discount').classList.remove('hidden');
+       document.getElementById('discount-price').innerText=discountPrice;
+       document.getElementById('cupon').classList.add('hidden');
+}
+   }
+    else{
+       alert('Please give a correct cupon code');
+   }
+}
+)
